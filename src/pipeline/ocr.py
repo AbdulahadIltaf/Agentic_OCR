@@ -7,17 +7,10 @@ def run_ocr(img: "Image.Image") -> list:
     model = genai.GenerativeModel(GEMINI_MODEL)
     
     prompt = """
-    Analyze the image. It contains notes, diagrams, and text.
-    Extract all readable text in a logical flow. 
-    Identify the formatting for each block of text.
-    Return ONLY a valid JSON array of objects. Do not include markdown wrappers (like ```json).
-    Each object must have these keys:
-    "text": (string) The extracted text for a paragraph or line
-    "style": (string) "Heading 1" for big titles, or "Normal" for regular text
-    "bold": (boolean) true if the text looks bold, false otherwise
-    "align": (integer) 0 for left, 1 for center, 2 for right
-    
-    Do your best to transcribe any diagrams as descriptive text or just extract their labels sequentially.
+    Extract all text and formatting from this image.
+    Return ONLY a JSON array of objects with:
+    "text": (string), "style": ("Heading 1" or "Normal"), "bold": (bool), "align": (0-left, 1-center, 2-right).
+    No markdown wrappers.
     """
     
     try:

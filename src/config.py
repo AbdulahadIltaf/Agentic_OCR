@@ -29,7 +29,7 @@ if api_key:
 else:
     print("WARNING: GEMINI_API_KEY not set — add API_KEYS/.env at project root or export the variable.")
 
-GEMINI_MODEL = "gemini-2.5-flash"
+GEMINI_MODEL = "gemini-1.5-flash"
 
 MAX_RETRIES = 2
 LOG_PATH = Path("/tmp/confidence_log.json")
