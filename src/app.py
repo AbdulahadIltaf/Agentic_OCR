@@ -16,7 +16,7 @@ from agent.act import act
 from agent.memory import log_session
 from config import LOG_PATH
 
-XAI_LOG_PATH = Path(__file__).parent / "agent" / "xai_logs.json"
+XAI_LOG_PATH = Path("/tmp/xai_logs.json")
 COMPLIANCE_DB_PATH = Path(__file__).parent / "agent" / "compliance_db.json"
 WEB_DIR = Path(__file__).resolve().parent.parent / "web"
 
@@ -24,7 +24,7 @@ app = Flask(__name__, static_folder=str(WEB_DIR))
 CORS(app)
 
 SESSION_STATE = {}
-UPLOAD_FOLDER = "temp_uploads"
+UPLOAD_FOLDER = "/tmp/temp_uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 def append_xai_log(session_id, trace):
@@ -127,11 +127,12 @@ def api_act():
         decision["action"] = "export"
 
         out_name = f"export_{session_id[:8]}.docx"
+        out_path = os.path.join("/tmp", out_name)
         
         class DummyImg:
             width = state["img_width"]
             
-        act(DummyImg(), state["json_list"], decision, out_name)
+        act(DummyImg(), state["json_list"], decision, out_path)
         
         result = {"attempt": 1, **decision, "out": out_name}
         log_session(result)
@@ -171,9 +172,7 @@ def download_file(filename):
     if not filename.endswith('.docx') or '/' in filename or '\\' in filename:
         return jsonify({"error": "Invalid file request"}), 400
     
-    # Resolve the absolute path to the implementation directory
-    root_dir = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
-    return send_from_directory(root_dir, filename, as_attachment=True)
+    return send_from_directory("/tmp", filename, as_attachment=True)
 
 @app.route("/api/agent/history", methods=["GET"])
 def api_history():

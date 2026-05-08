@@ -32,4 +32,4 @@ else:
 GEMINI_MODEL = "gemini-2.5-flash"
 
 MAX_RETRIES = 2
-LOG_PATH = Path(__file__).parent / "agent" / "confidence_log.json"
+LOG_PATH = Path("/tmp/confidence_log.json")
