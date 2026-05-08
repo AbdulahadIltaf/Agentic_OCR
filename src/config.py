@@ -25,7 +25,7 @@ load_dotenv(dotenv_path=_resolve_env_file())
 
 api_key = os.getenv("GEMINI_API_KEY")
 if api_key:
-    genai.configure(api_key=api_key)
+    genai.configure(api_key=api_key.strip())
 else:
     print("WARNING: GEMINI_API_KEY not set — add API_KEYS/.env at project root or export the variable.")
 
