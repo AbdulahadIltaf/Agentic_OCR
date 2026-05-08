@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TraceDoc — Phase 2 Agentic Desk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="shell">
+    <aside class="law-rail" id="compliance-sidebar" aria-label="Compliance reference">
+        <div class="law-rail__brand">
+            <span class="law-rail__badge">Phase 2</span>
+            <h2 class="law-rail__title">TraceDoc</h2>
+            <p class="law-rail__tag">Ethics · Law · XAI</p>
+        </div>
+        <header class="law-rail__head">
+            <h3>Compliance library</h3>
+            <p>Loaded from <code>/api/compliance</code> (no hardcoded statutes in UI).</p>
+        </header>
+        <div id="compliance-content" class="law-rail__scroll"></div>
+    </aside>
+
+    <div class="workspace">
+        <header class="toolbar" role="banner">
+            <div class="toolbar__left">
+                <div class="toolbar__logo" aria-hidden="true"></div>
+                <div>
+                    <h1 class="toolbar__name">TraceDoc Agent</h1>
+                    <p class="toolbar__sub">Image → structured reasoning → human-gated .docx</p>
+                </div>
+            </div>
+            <nav class="phases" aria-label="Pipeline progress">
+                <button type="button" class="phases__item step step-upload active" data-screen="upload">1 · Ingest</button>
+                <button type="button" class="phases__item step step-processing" data-screen="processing">2 · Reason</button>
+                <button type="button" class="phases__item step step-confidence" data-screen="confidence">3 · Gate</button>
+                <button type="button" class="phases__item step step-output" data-screen="output">4 · Out</button>
+            </nav>
+            <button type="button" class="toolbar__ghost" id="history-btn" title="Session memory">
+                Memory log
+            </button>
+        </header>
+
+        <main class="stage" role="main">
+            <section id="screen-upload" class="screen screen--active" aria-labelledby="upload-title">
+                <div class="bento">
+                    <div id="drop-zone" class="drop-tile" tabindex="0" role="button" aria-label="Upload document image">
+                        <span class="drop-tile__icon" aria-hidden="true">↑</span>
+                        <h2 id="upload-title">Drop a scan or photo</h2>
+                        <p>JPG / PNG · single-page English print recommended</p>
+                        <input type="file" id="file-input" accept=".jpg,.jpeg,.png" hidden>
+                        <button type="button" class="btn btn--primary mt" onclick="document.getElementById('file-input').click()">Browse files</button>
+                    </div>
+                    <aside class="notice" role="contentinfo">
+                        <strong>Data minimization:</strong> files live in a temp folder only for the active session, then deleted (PECA / GDPR-style design). Gemini Vision is used for extraction — keep API keys out of git.
+                    </aside>
+                </div>
+            </section>
+
+            <section id="screen-processing" class="screen" aria-labelledby="processing-title">
+                <div class="bento bento--wide">
+                    <h2 id="processing-title" class="visually-hidden">Agent reasoning</h2>
+                    <div class="reason-head">
+                        <div class="pulse-ring" aria-hidden="true"></div>
+                        <div>
+                            <p class="reason-head__label">Observe → interpret → decide</p>
+                            <p class="reason-head__meta">Streaming trace below is mirrored server-side in <code>xai_logs.json</code>.</p>
+                        </div>
+                    </div>
+                    <div class="terminal">
+                        <header class="terminal__bar"><span class="dot"></span> Explainability stream</header>
+                        <div id="feed-terminal" class="terminal__body" aria-live="polite"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="screen-confidence" class="screen" aria-labelledby="gate-title">
+                <div class="gate-grid glass">
+                    <div class="gate-grid__hero">
+                        <h2 id="gate-title">Human-in-the-loop gate</h2>
+                        <p class="gate-grid__lede">Confidence is computed from OCR JSON structure (not vanity metrics).</p>
+                        <div class="meter" aria-live="polite">
+                            <span id="conf-value" class="meter__num">0</span><span class="meter__pct">%</span>
+                        </div>
+                        <div class="meter__bar" aria-hidden="true"><div id="conf-bar" class="meter__fill"></div></div>
+                        <label class="risk-check hidden" id="risk-ack-wrap">
+                            <input type="checkbox" id="ack-risk">
+                            <span>I understand export below 80% confidence may produce unreliable text and I accept responsibility for downstream use.</span>
+                        </label>
+                        <div class="gate-actions">
+                            <button type="button" id="btn-reupload" class="btn btn--ghost">Abort session</button>
+                            <button type="button" id="btn-approve" class="btn btn--accent">Authorize export (.docx)</button>
+                        </div>
+                    </div>
+                    <aside class="gate-aside">
+                        <h3>Rationale</h3>
+                        <ul class="gate-list">
+                            <li>Server enforces extra acknowledgement when score &lt; 80.</li>
+                            <li>Abort wipes temp image and session state.</li>
+                            <li>Aligned with ACM/IEEE “avoid harm” and explainability expectations.</li>
+                        </ul>
+                        <div id="risk-note" class="risk-note" role="alert"></div>
+                    </aside>
+                </div>
+            </section>
+
+            <section id="screen-output" class="screen" aria-labelledby="output-title">
+                <h2 id="output-title" class="visually-hidden">Outputs</h2>
+                <div class="tri">
+                    <article class="tri__col glass">
+                        <h3>Source</h3>
+                        <div class="tri__frame">
+                            <img id="output-img-src" src="" alt="Uploaded page">
+                        </div>
+                    </article>
+                    <article class="tri__col glass tri__col--grow">
+                        <h3>Live structure preview</h3>
+                        <div id="docx-canvas" class="doc-preview"></div>
+                        <footer class="tri__footer">
+                            <button type="button" id="btn-start-new" class="btn btn--ghost">New run</button>
+                            <button type="button" id="btn-download" class="btn btn--primary">Download .docx</button>
+                        </footer>
+                    </article>
+                    <article class="tri__col glass tri__col--dark">
+                        <h3>Audit JSON</h3>
+                        <pre id="audit-log-content" class="audit-pre">—</pre>
+                    </article>
+                </div>
+            </section>
+
+            <section id="screen-history" class="screen" aria-labelledby="history-title">
+                <div class="history glass">
+                    <header class="history__head">
+                        <h2 id="history-title">Immutable memory</h2>
+                        <button type="button" id="btn-close-history" class="btn btn--ghost">Close</button>
+                    </header>
+                    <div id="history-list" class="history__list" role="list"></div>
+                    <p class="history__foot">Green angle: batching perception + deleting temps promptly reduces unnecessary API calls vs naive retry loops.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+
+<div id="toast" class="toast toast--hidden" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>

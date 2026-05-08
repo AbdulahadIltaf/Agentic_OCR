@@ -1,0 +1,93 @@
+[
+  {
+    "attempt": 1,
+    "action": "export",
+    "mean_conf": 95.0,
+    "retry": false,
+    "out": "smoke_agent_out.docx"
+  },
+  {
+    "attempt": 1,
+    "action": "export",
+    "mean_conf": 95.0,
+    "retry": false,
+    "out": "smoke_agent_out.docx"
+  },
+  {
+    "attempt": 1,
+    "action": "export",
+    "mean_conf": 95.0,
+    "retry": false,
+    "out": "export_fdd5262a.docx"
+  },
+  {
+    "attempt": 1,
+    "action": "export",
+    "mean_conf": 95.0,
+    "retry": false,
+    "out": "export_47e94aef.docx"
+  },
+  {
+    "attempt": 1,
+    "action": "export",
+    "mean_conf": 95.0,
+    "retry": false,
+    "out": "export_6b1ea513.docx"
+  },
+  {
+    "attempt": 1,
+    "action": "export",
+    "mean_conf": 95.0,
+    "retry": false,
+    "out": "export_cd39634b.docx"
+  },
+  {
+    "attempt": 1,
+    "action": "export",
+    "mean_conf": 95.0,
+    "retry": false,
+    "out": "export_b35e42bf.docx"
+  },
+  {
+    "attempt": 1,
+    "action": "export",
+    "mean_conf": 95.0,
+    "retry": false,
+    "out": "export_7cead73f.docx"
+  },
+  {
+    "attempt": 1,
+    "action": "export",
+    "mean_conf": 95.0,
+    "retry": false,
+    "out": "export_3c3ccc2d.docx"
+  },
+  {
+    "attempt": 1,
+    "action": "export",
+    "mean_conf": 95.0,
+    "retry": false,
+    "out": "export_475dca04.docx"
+  },
+  {
+    "attempt": 1,
+    "action": "export",
+    "mean_conf": 95.0,
+    "retry": false,
+    "out": "export_d66d5d2e.docx"
+  },
+  {
+    "attempt": 1,
+    "action": "export",
+    "mean_conf": 95.0,
+    "retry": false,
+    "out": "export_e1e19973.docx"
+  },
+  {
+    "attempt": 1,
+    "action": "export",
+    "mean_conf": 59.41,
+    "retry": false,
+    "out": "export_1758b751.docx"
+  }
+]

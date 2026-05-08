@@ -1,0 +1,272 @@
+{
+  "c3ad06b0-f245-49d0-bdb8-9c09e846f5a1": [
+    {
+      "step": "PERCEIVE",
+      "message": "Scanning document boundaries... PII patterns checked. Local processing active."
+    },
+    {
+      "step": "DECIDE",
+      "message": "Goal-based agent selecting transformation strategy based on layout."
+    },
+    {
+      "step": "SAFETY",
+      "message": "Verification against ACM/IEEE Code of Ethics principle 1.2 (Avoid Harm)... Passed."
+    },
+    {
+      "step": "ACT",
+      "message": "Calculated heuristic confidence: 95.0%. Awaiting Human-in-the-Loop validation."
+    }
+  ],
+  "47e94aef-0242-45a6-90c8-f73498d8f987": [
+    {
+      "step": "PERCEIVE",
+      "message": "Scanning document boundaries... PII patterns checked. Local processing active."
+    },
+    {
+      "step": "DECIDE",
+      "message": "Goal-based agent selecting transformation strategy based on layout."
+    },
+    {
+      "step": "SAFETY",
+      "message": "Verification against ACM/IEEE Code of Ethics principle 1.2 (Avoid Harm)... Passed."
+    },
+    {
+      "step": "ACT",
+      "message": "Calculated heuristic confidence: 95.0%. Awaiting Human-in-the-Loop validation."
+    }
+  ],
+  "6b1ea513-e45a-414a-a152-b20964f79e97": [
+    {
+      "step": "PERCEIVE",
+      "message": "Scanning document boundaries... PII patterns checked. Local processing active."
+    },
+    {
+      "step": "DECIDE",
+      "message": "Goal-based agent selecting transformation strategy based on layout."
+    },
+    {
+      "step": "SAFETY",
+      "message": "Verification against ACM/IEEE Code of Ethics principle 1.2 (Avoid Harm)... Passed."
+    },
+    {
+      "step": "ACT",
+      "message": "Calculated heuristic confidence: 95.0%. Awaiting Human-in-the-Loop validation."
+    }
+  ],
+  "cd39634b-5b4d-4ea6-841c-a33ec2a87eb6": [
+    {
+      "step": "PERCEIVE",
+      "message": "Scanning document boundaries... PII patterns checked. Local processing active."
+    },
+    {
+      "step": "DECIDE",
+      "message": "Goal-based agent selecting transformation strategy based on layout."
+    },
+    {
+      "step": "SAFETY",
+      "message": "Verification against ACM/IEEE Code of Ethics principle 1.2 (Avoid Harm)... Passed."
+    },
+    {
+      "step": "ACT",
+      "message": "Calculated heuristic confidence: 95.0%. Awaiting Human-in-the-Loop validation."
+    }
+  ],
+  "b35e42bf-2e60-4eca-b098-5c98de8235f2": [
+    {
+      "step": "PERCEIVE",
+      "message": "Scanning document boundaries... PII patterns checked. Local processing active.",
+      "citation_key": "PECA_SEC_16"
+    },
+    {
+      "step": "DECIDE",
+      "message": "Goal-based agent selecting transformation strategy based on layout.",
+      "citation_key": "GDPR_MINIMIZATION"
+    },
+    {
+      "step": "SAFETY",
+      "message": "Verification against code of ethics. Avoid Harm checked. Passed.",
+      "citation_key": "ACM_1_2"
+    },
+    {
+      "step": "ACT",
+      "message": "Calculated heuristic confidence: 95.0%. Awaiting Human-in-the-Loop validation.",
+      "citation_key": "GREEN_COMPUTING"
+    }
+  ],
+  "7cead73f-01f4-4df6-b71c-f33c7f2faf5d": [
+    {
+      "step": "PERCEIVE",
+      "message": "Scanning document boundaries... PII patterns checked. Local processing active.",
+      "citation_key": "PECA_SEC_16"
+    },
+    {
+      "step": "DECIDE",
+      "message": "Goal-based agent selecting transformation strategy based on layout.",
+      "citation_key": "GDPR_MINIMIZATION"
+    },
+    {
+      "step": "SAFETY",
+      "message": "Verification against code of ethics. Avoid Harm checked. Passed.",
+      "citation_key": "ACM_1_2"
+    },
+    {
+      "step": "ACT",
+      "message": "Calculated heuristic confidence: 95.0%. Awaiting Human-in-the-Loop validation.",
+      "citation_key": "GREEN_COMPUTING"
+    }
+  ],
+  "3c3ccc2d-c1b2-49dc-98fd-15014e0466b5": [
+    {
+      "step": "PERCEIVE",
+      "message": "Scanning document boundaries... PII patterns checked. Local processing active.",
+      "citation_key": "PECA_SEC_16"
+    },
+    {
+      "step": "DECIDE",
+      "message": "Goal-based agent selecting transformation strategy based on layout.",
+      "citation_key": "GDPR_MINIMIZATION"
+    },
+    {
+      "step": "SAFETY",
+      "message": "Verification against code of ethics. Avoid Harm checked. Passed.",
+      "citation_key": "ACM_1_2"
+    },
+    {
+      "step": "ACT",
+      "message": "Calculated heuristic confidence: 95.0%. Awaiting Human-in-the-Loop validation.",
+      "citation_key": "GREEN_COMPUTING"
+    }
+  ],
+  "475dca04-485a-4742-becd-29337f402230": [
+    {
+      "step": "PERCEIVE",
+      "message": "Scanning document boundaries... PII patterns checked. Local processing active.",
+      "citation_key": "PECA_SEC_16"
+    },
+    {
+      "step": "DECIDE",
+      "message": "Goal-based agent selecting transformation strategy based on layout.",
+      "citation_key": "GDPR_MINIMIZATION"
+    },
+    {
+      "step": "SAFETY",
+      "message": "Verification against code of ethics. Avoid Harm checked. Passed.",
+      "citation_key": "ACM_1_2"
+    },
+    {
+      "step": "ACT",
+      "message": "Calculated heuristic confidence: 95.0%. Awaiting Human-in-the-Loop validation.",
+      "citation_key": "GREEN_COMPUTING"
+    }
+  ],
+  "d66d5d2e-3b9f-4f1d-930c-188765d4e78b": [
+    {
+      "step": "PERCEIVE",
+      "message": "Scanning document boundaries... PII patterns checked. Local processing active.",
+      "citation_key": "PECA_SEC_16"
+    },
+    {
+      "step": "DECIDE",
+      "message": "Goal-based agent selecting transformation strategy based on layout.",
+      "citation_key": "GDPR_MINIMIZATION"
+    },
+    {
+      "step": "SAFETY",
+      "message": "Verification against code of ethics. Avoid Harm checked. Passed.",
+      "citation_key": "ACM_1_2"
+    },
+    {
+      "step": "ACT",
+      "message": "Calculated heuristic confidence: 95.0%. Awaiting Human-in-the-Loop validation.",
+      "citation_key": "GREEN_COMPUTING"
+    }
+  ],
+  "1ca75a8d-93f3-490a-b1f3-2b3599f55bfb": [
+    {
+      "step": "PERCEIVE",
+      "message": "Scanning document boundaries... PII patterns checked. Local processing active.",
+      "citation_key": "PECA_SEC_16"
+    },
+    {
+      "step": "DECIDE",
+      "message": "Goal-based agent selecting transformation strategy based on layout.",
+      "citation_key": "GDPR_MINIMIZATION"
+    },
+    {
+      "step": "SAFETY",
+      "message": "Verification against code of ethics. Avoid Harm checked. Passed.",
+      "citation_key": "ACM_1_2"
+    },
+    {
+      "step": "ACT",
+      "message": "Calculated heuristic confidence: 95.0%. Awaiting Human-in-the-Loop validation.",
+      "citation_key": "GREEN_COMPUTING"
+    }
+  ],
+  "81c70f67-0caa-4815-8fe4-7c9b443a5550": [
+    {
+      "step": "PERCEIVE",
+      "message": "Scanning document boundaries... PII patterns checked. Local processing active.",
+      "citation_key": "PECA_SEC_16"
+    },
+    {
+      "step": "DECIDE",
+      "message": "Goal-based agent selecting transformation strategy based on layout.",
+      "citation_key": "GDPR_MINIMIZATION"
+    },
+    {
+      "step": "SAFETY",
+      "message": "Verification against code of ethics. Avoid Harm checked. Passed.",
+      "citation_key": "ACM_1_2"
+    },
+    {
+      "step": "ACT",
+      "message": "Calculated heuristic confidence: 95.0%. Awaiting Human-in-the-Loop validation.",
+      "citation_key": "GREEN_COMPUTING"
+    }
+  ],
+  "e1e19973-0dbb-48fc-ae4d-7d48d6c147c7": [
+    {
+      "step": "PERCEIVE",
+      "message": "Scanning document boundaries... PII patterns checked. Local processing active.",
+      "citation_key": "PECA_SEC_16"
+    },
+    {
+      "step": "DECIDE",
+      "message": "Goal-based agent selecting transformation strategy based on layout.",
+      "citation_key": "GDPR_MINIMIZATION"
+    },
+    {
+      "step": "SAFETY",
+      "message": "Verification against code of ethics. Avoid Harm checked. Passed.",
+      "citation_key": "ACM_1_2"
+    },
+    {
+      "step": "ACT",
+      "message": "Calculated heuristic confidence: 95.0%. Awaiting Human-in-the-Loop validation.",
+      "citation_key": "GREEN_COMPUTING"
+    }
+  ],
+  "1758b751-c8f0-4fb6-9d59-d83405fe062e": [
+    {
+      "step": "PERCEIVE",
+      "message": "Scanning document boundaries... PII patterns checked. Local processing active.",
+      "citation_key": "PECA_SEC_16"
+    },
+    {
+      "step": "DECIDE",
+      "message": "Goal-based agent selecting transformation strategy based on layout.",
+      "citation_key": "GDPR_MINIMIZATION"
+    },
+    {
+      "step": "SAFETY",
+      "message": "Verification against code of ethics. Avoid Harm checked. Passed.",
+      "citation_key": "ACM_1_2"
+    },
+    {
+      "step": "ACT",
+      "message": "Calculated heuristic confidence: 59.41%. Awaiting Human-in-the-Loop validation.",
+      "citation_key": "GREEN_COMPUTING"
+    }
+  ]
+}

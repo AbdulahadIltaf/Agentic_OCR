@@ -1,0 +1,26 @@
+{
+    "GDPR_MINIMIZATION": {
+        "title": "GDPR Article 5(1)(c)",
+        "framework": "Data Minimization",
+        "text": "Personal data shall be adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed (‘data minimisation’).",
+        "rationale": "Prevents the system from retaining sensitive PII longer than the absolute minimum inference time."
+    },
+    "PECA_SEC_16": {
+        "title": "PECA 2016 Section 16",
+        "framework": "Identity Protection",
+        "text": "Whoever obtains, sells, possesses, transmits, or uses another person's identity information without authorization shall be punished with imprisonment or a fine.",
+        "rationale": "Mandates strict localized boundary validation to prevent unauthorized transmission of identity documents."
+    },
+    "ACM_1_2": {
+        "title": "ACM/IEEE Principle 1.2",
+        "framework": "Avoid Harm",
+        "text": "This principle prohibits use of computing technology in ways that result in harm... the system must be validated to meet those requirements. If an unintended harm results, the responsible person must mitigate the negative consequences.",
+        "rationale": "Enforces the Human-in-the-Loop Confidence Gate, ensuring the AI cannot autonomously execute potentially harmful actions."
+    },
+    "GREEN_COMPUTING": {
+        "title": "Sustainable SE",
+        "framework": "Green Computing",
+        "text": "Minimization of computational overhead and cloud payload sizes to reduce overall carbon emissions.",
+        "rationale": "Justifies localized heuristic pre-filtering to prevent infinite cloud API looping."
+    }
+}
